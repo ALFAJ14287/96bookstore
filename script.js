@@ -1,5 +1,5 @@
 function submitForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCNApHpe2jO62LzKPulAFuX6lZjHP20a21N17D8nucD-Xl5FlzmhD2UANPc8-6v7fS/exec'; // Replace with your Google Apps Script URL
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCNApHpe2jO62LzKPulAFuX6lZjHP20a21N17D8nucD-Xl5FlzmhD2UANPc8-6v7fS/exec";
   const form = document.getElementById('registrationForm');
 
   const formData = new FormData(form);

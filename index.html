@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suleiman-Project</title><link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIZBULLAH School Registration</title>
+  <link rel="stylesheet" href="man.css">
 </head>
-<!--THIS IS THE STARTING OF BODY CONTENT-->
 <body>
-    <div class="container">
-        <h1>Welcome to <br>{HIZBULLAH  ACADEMY}</h1>
-        <form action="Registration-Form">
-           <center> <img src="logo.png" alt="" width="100px" style="margin-bottom: 0;"></center>
-            <h4>pls. fill the following...</h4>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="student name"><br>
-            <label for="Reg.No">Reg.No</label>
-            <input type="text" id="registration no." name="reg.no" placeholder="reg.no"><br>
-            <label for="Date">Date of Birth</label>
-            <input type="date" name="" id="DOB"><br>
-            <label for="Duration">Duration</label>
-            <select name="Duration" id="Duration" >
-                <option value="Duration">Time Duration</option>
-                <option value="1 yrs">1 year</option>
-                <option value="2 yrs">2 year</option>
-                <option value="3 yrs">3 year</option>
-            </select><br>
-           <center><button type="submit">register</button>
-           </center>
-           
-        </form>
-    </div>
+
+  <div class="form-container">
+    <img src="logo.png" alt="HIZBULLAH School Logo">
+    <h2>HIZBULLAH School Registration</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State of Origin</label>
+        <select id="state" name="state" required>
+          <option value="">Select your state</option>
+          <!-- Nigerian States -->
+          <script>
+            const states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "FCT"];
+            states.forEach(state => {
+              document.write(`<option value="${state}">${state}</option>`);
+            });
+          </script>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nationality">Nationality</label>
+        <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+      </div>
+
+      <div class="form-group">
+        <label for="maritalStatus">Marital Status</label>
+        <select id="maritalStatus" name="maritalStatus" required>
+          <option value="">Select status</option>
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Contact Address</label>
+        <textarea id="address" name="address" placeholder="Enter your contact address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nextOfKin">Next of Kin Name</label>
+        <input type="text" id="nextOfKin" name="nextOfKin" placeholder="Enter next of kin name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="passport">Upload Passport Photo</label>
+        <input type="file" id="passport" name="passport" accept="image/*" required>
+      </div>
+
+      <div class="form-group">
+        <button type="button" onclick="submitForm()">Submit</button>
+      </div>
+    </form>
+  </div>
+<script src="script.js"></script>
+
 </body>
 </html>

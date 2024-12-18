@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIZBULLAH School Registration</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <div class="form-container">
+        <h1>Welcome to</h1>
+        <p><h1>مدرسة حزب الله للتربية الاسلامية</h1></p>
+        <center><p><img src="logo.png" alt="" ></p></center>
 
-  <div class="form-container">
-    <img src="logo.png" alt="HIZBULLAH School Logo">
-    <h2>HIZBULLAH School Registration</h2>
-    <form id="registrationForm">
-      <div class="form-group">
-        <label for="studentName">Student Name</label>
-        <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
-      </div>
+        <h2>Hizbullah Registration Form.</h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-      <div class="form-group">
-        <label for="dob">Date of Birth</label>
-        <input type="date" id="dob" name="dob" required>
-      </div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
 
-      <div class="form-group">
-        <label for="state">State of Origin</label>
-        <select id="state" name="state" required>
-          <option value="">Select your state</option>
-          <!-- Nigerian States -->
-          <script>
-            const states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "FCT"];
-            states.forEach(state => {
-              document.write(`<option value="${state}">${state}</option>`);
-            });
-          </script>
-        </select>
-      </div>
+            <label for="nextOfKin">Next of Kin:</label>
+            <input type="text" id="nextOfKin" name="nextOfKin" required>
 
-      <div class="form-group">
-        <label for="nationality">Nationality</label>
-        <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
-      </div>
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required>
 
-      <div class="form-group">
-        <label for="maritalStatus">Marital Status</label>
-        <select id="maritalStatus" name="maritalStatus" required>
-          <option value="">Select status</option>
-          <option value="Single">Single</option>
-          <option value="Married">Married</option>
-        </select>
-      </div>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
 
-      <div class="form-group">
-        <label for="mobileNumber">Mobile Number</label>
-        <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" required>
-      </div>
+            <label for="placeOfBirth">Place of Birth:</label>
+            <select id="placeOfBirth" name="placeOfBirth" required>
+                <option value="">Select State</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+                <option value="FCT">FCT</option>
+            </select>
 
-      <div class="form-group">
-        <label for="address">Contact Address</label>
-        <textarea id="address" name="address" placeholder="Enter your contact address" required></textarea>
-      </div>
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Torgo">Torgo</option>
+            </select>
 
-      <div class="form-group">
-        <label for="occupation">Occupation</label>
-        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required>
-      </div>
+            <label for="occupation">Occupation:</label>
+            <select id="occupation" name="occupation" required>
+                <option value="">Select Occupation</option>
+                <option value="Civil Servant">Civil Servant</option>
+                <option value="Business Man">Business Man</option>
+            </select>
 
-      <div class="form-group">
-        <label for="nextOfKin">Next of Kin Name</label>
-        <input type="text" id="nextOfKin" name="nextOfKin" placeholder="Enter next of kin name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="passport">Upload Passport Photo</label>
-        <input type="file" id="passport" name="passport" accept="image/*" required>
-      </div>
-
-      <div class="form-group">
-        <button type="button" onclick="submitForm()">Submit</button>
-      </div>
-    </form>
-  </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p class="success" id="successMessage" style="display: none;">Form submitted successfully!</p>
+        <p class="error" id="errorMessage" style="display: none;">Failed to submit the form. Try again.</p>
+    </div>
 <script src="script.js"></script>
-
 </body>
 </html>
